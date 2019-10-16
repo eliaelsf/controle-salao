@@ -28,9 +28,8 @@
 
 		<server.port>8080</server.port>
 		<spring.jpa.show-sql>true</spring.jpa.show-sql>
-		<!-- <spring.jpa.hibernate.ddl-auto>create-drop update</spring.jpa.hibernate.ddl-auto> -->
-		<!--<spring.jpa.hibernate.ddl-auto>create-drop</spring.jpa.hibernate.ddl-auto>
-		<pa-datasource>jdbc:hsqldb:file:/home2/salaodb;shutdown=true</pa-datasource>
+		<!-- <spring.jpa.hibernate.ddl-auto>create-drop update</spring.jpa.hibernate.ddl-auto> -->		
+		<!--<pa-datasource>jdbc:hsqldb:file:/home2/salaodb;shutdown=true</pa-datasource>
 		<jpa-database>org.hibernate.dialect.HSQLDialect</jpa-database> -->
 	</properties>
 
