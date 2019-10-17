@@ -2,6 +2,7 @@ package com.fabiorHair.controlesalao.service;
 
 
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -42,20 +43,21 @@ public class ProdutoService {
     	prd.setImagem(imagem);
     	produtoDao.saveAndFlush(prd);
     	
-    }
+    }    
     
-    
-    public List<ProdutoDTO> findProdutos(ProdutoDTO produtoDTO ){
-    	List <Produto> produtos = null;
-    	if(produtoDTO == null || StringUtil.isStringVazia(produtoDTO.getDescricao())){    		
-    		produtos =  produtoDao.findAll();    		
-    	}else{
-    		produtos = produtoDao.findByDescricaoLike(produtoDTO.getDescricao());
-    	}    	
+    public List<ProdutoDTO> findProdutos(){    	
+    	List <Produto> produtos = produtoDao.findAll();    	
     	return produtos.stream()
  			   .map(prod -> this.converteEntToDto(prod))
  			   .sorted(Comparator.comparing(ProdutoDTO::getDescricao))
  			   .collect((Collectors.toList()));
+    }
+    
+    public List<ProdutoDTO> findProdutosVigentes(){    
+    	Date dataAtual = new Date();
+    	return this.findProdutos().stream()
+    			   .filter(prod -> (prod.getDataValidade() == null || prod.getDataValidade().before(dataAtual)))
+    			   .collect((Collectors.toList()));
     }
     
     public List<Produto>findByDescricao(String descricao){

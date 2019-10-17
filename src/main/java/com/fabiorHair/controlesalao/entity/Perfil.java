@@ -44,7 +44,7 @@ public class Perfil extends Modelo {
 	 @Column(name="DESCRICAO")
      private String descricao;
      
-     @JsonIgnore
+    
      @ManyToMany
      @JoinTable(name="perfil_permissao", joinColumns=
      {@JoinColumn(name="id_perfil")}, inverseJoinColumns=

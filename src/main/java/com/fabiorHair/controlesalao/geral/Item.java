@@ -1,9 +1,6 @@
 package com.fabiorHair.controlesalao.geral;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
-import java.util.Date;
-
 import javax.persistence.MappedSuperclass;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;

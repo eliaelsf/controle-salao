@@ -32,7 +32,7 @@ import lombok.Setter;
 @Entity
 @Table(name="PESSOA")
 public class Pessoa extends Item {
-
+ 
 	private static final long serialVersionUID = 3159340602804443700L;
 
 	@Id
@@ -53,7 +53,7 @@ public class Pessoa extends Item {
 	private String cpf;
 	
 	@Column(name="EMAIL")	
-    @Size(max = 100)
+    @Size(max = 100)	
 	private String email;	
 	
 	@Column(name="TELEFONE")	

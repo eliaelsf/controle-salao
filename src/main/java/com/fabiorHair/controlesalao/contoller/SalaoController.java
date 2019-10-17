@@ -72,21 +72,23 @@ public class SalaoController  {
 	@Privado(role=Role.ROLE_ADMIN)
 	@PostMapping("/castradoProduImagem")
 	public void cadastrarProdutoComImagem(@RequestParam("file") MultipartFile file, @RequestParam("descricao") String descricao){		
-		
 		try {
 			this.produtoService.adicionarImagemProduto(descricao, file.getBytes());
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		
+			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Erro ao vincular imagem ao produto.");
+		}	
 	}	
 	
+	@Privado(role=Role.ROLE_ADMIN)
+	@GetMapping("/produtos")
+	public ResponseEntity<List<ProdutoDTO>> buscarProdutos(){	
+		return ResponseEntity.ok().body(produtoService.findProdutos());
+	}
+	
 	@Privado(role=Role.ROLE_GERAL)
-	@PostMapping("/produtos")
-	public ResponseEntity<List<ProdutoDTO>> buscarProdutos(@RequestBody ProdutoDTO produto){	
-		return ResponseEntity.ok().body(produtoService.findProdutos(produto));
+	@GetMapping("/produtosVigentes")
+	public ResponseEntity<List<ProdutoDTO>> buscarProdutosVigentes(){	
+		return ResponseEntity.ok().body(produtoService.findProdutosVigentes());
 	}
 	
 	@Privado(role=Role.ROLE_GERAL)
