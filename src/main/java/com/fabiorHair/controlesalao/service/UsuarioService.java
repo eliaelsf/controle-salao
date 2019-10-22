@@ -39,7 +39,7 @@ public class UsuarioService {
 		user.setLogin(userDTO.getLogin());
 		user.setNome(userDTO.getNome());
 		user.setSenha(FormatadorUtil.encryptMD5(userDTO.getSenha()));
-		user.setPerfil(this.obterPerfilAdm());
+		user.setPerfil(this.obterPerfilCliente());
 		return user;
 	}
 	
@@ -49,7 +49,7 @@ public class UsuarioService {
 		if(pefil == null) {
 			pefil = new Perfil();
 			pefil.setNome("Cliente");
-			pefil.setDescricao("Perfil com permiss√£o de cliente");
+			pefil.setDescricao("Perfil com permiss„o de cliente");
 			pefil.setDataCriacao(new Date());
 			pefil.setDataAtualizacao(new Date());
 			pefil.setPermissoes(this.permissaoRepository.findByPapel(Role.ROLE_GERAL));

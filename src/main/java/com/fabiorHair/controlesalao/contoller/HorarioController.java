@@ -69,7 +69,7 @@ public class HorarioController {
 	}
 	private void validaJanela(JanelaDTO janela)  {		
 		if(janela.getData().before(new Date())) {
-			throw new JanelaException("A data da janela inv√°lida. Deve ser superior ou igual a data atual");
+			throw new JanelaException("A data da janela inv·lida. Deve ser superior ou igual a data atual");
 		}
 		
 		if(this.janelaService.janelaExisteProfissional(janela)) {

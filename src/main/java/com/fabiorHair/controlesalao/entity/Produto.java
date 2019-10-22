@@ -10,6 +10,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -31,6 +32,8 @@ public class Produto extends Item {
 	private static final long serialVersionUID = 5877429350879734946L;
 
 	@Id
+	//@SequenceGenerator(name = "seq_prod", sequenceName = "seq_prod", allocationSize = 1)
+	//@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_prod")
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="ID_PRODUTO")
 	private Long id;

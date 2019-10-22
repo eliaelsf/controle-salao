@@ -52,7 +52,8 @@ public class SegurancaInterceptor extends HandlerInterceptorAdapter{
                          }                            
                      }                     
                     
-                     if(HttpStatus.BAD_REQUEST.value() == response.getStatus()) {                    	 
+                     if(HttpStatus.BAD_REQUEST.value() == response.getStatus() ||
+                    		 HttpStatus.INTERNAL_SERVER_ERROR.value() == response.getStatus() ) {                    	 
                     	 return super.preHandle(request, response, handler);
                      }
                      //se nao eh publico nem privado, nega por padrao.

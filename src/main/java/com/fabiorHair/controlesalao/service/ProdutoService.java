@@ -56,9 +56,10 @@ public class ProdutoService {
     public List<ProdutoDTO> findProdutosVigentes(){    
     	Date dataAtual = new Date();
     	return this.findProdutos().stream()
-    			   .filter(prod -> (prod.getDataValidade() == null || prod.getDataValidade().before(dataAtual)))
+    			   .filter(prod -> (prod.getDataValidade() == null || prod.getDataValidade().after(dataAtual)))
     			   .collect((Collectors.toList()));
-    }
+    }  
+   
     
     public List<Produto>findByDescricao(String descricao){
     	return produtoDao.findByDescricao(descricao);

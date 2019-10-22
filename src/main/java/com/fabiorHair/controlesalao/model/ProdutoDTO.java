@@ -18,5 +18,6 @@ public class ProdutoDTO {
 	private BigDecimal valor;
 	private Date dataValidade;	
 	private byte[] imagem;
+	private String url;
 
 }
