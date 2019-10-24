@@ -10,7 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
-import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -19,7 +18,8 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import com.fabiorHair.controlesalao.geral.Item;
+import com.fabiorHair.controlesalao.geral.Modelo;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -27,7 +27,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name="PRODUTO")
-public class Produto extends Item {
+public class Produto extends Modelo {
 
 	private static final long serialVersionUID = 5877429350879734946L;
 

@@ -17,7 +17,7 @@ import javax.persistence.Table;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Size;
 
-import com.fabiorHair.controlesalao.geral.Item;
+import com.fabiorHair.controlesalao.geral.Modelo;
 import com.fabiorHair.controlesalao.geral.RolePessoa;
 
 import lombok.AllArgsConstructor;
@@ -31,7 +31,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name="PESSOA")
-public class Pessoa extends Item {
+public class Pessoa extends Modelo {
  
 	private static final long serialVersionUID = 3159340602804443700L;
 
@@ -78,5 +78,6 @@ public class Pessoa extends Item {
 	@OneToMany(mappedBy = "cliente")
 	private List<Horario> horarios;
 	
-	
+	@OneToMany(mappedBy = "cliente")
+	private List<Pedido> pedidos;
 }

@@ -96,6 +96,7 @@ public class SegurancaServico {
                             .setParam("nome", usuario.getNome())
                             .setParam("login", usuario.getLogin())
                             .setParam("perfil", usuario.getPerfil().getNome())
+                            .setParam("idUser", usuario.getId().toString())
                             .buildJSONMessage();
 
             } catch (OAuthProblemException e) {
