@@ -19,6 +19,12 @@ import com.fabiorHair.controlesalao.repository.PermissaoRepository;
 import com.fabiorHair.controlesalao.repository.UserRepository;
 import com.fabiorHair.controlesalao.util.FormatadorUtil;
 
+/**
+ * 
+ * @author eliael.figueiredo
+ *
+ */
+
 @Service
 public class UsuarioService {
 	

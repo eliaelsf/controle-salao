@@ -6,7 +6,10 @@ import org.springframework.stereotype.Component;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-
+/** 
+ * @author eliael.figueiredo
+ *
+ */
 @Data
 @Component
 @ConfigurationProperties(prefix = "app")

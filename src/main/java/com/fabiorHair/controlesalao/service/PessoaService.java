@@ -12,7 +12,9 @@ import com.fabiorHair.controlesalao.entity.Pessoa;
 import com.fabiorHair.controlesalao.geral.RolePessoa;
 import com.fabiorHair.controlesalao.model.PessoaDTO;
 import com.fabiorHair.controlesalao.repository.PessoaRepository;
-
+/** 
+ * @author eliael.figueiredo 
+ */
 @Service
 public class PessoaService {
 	

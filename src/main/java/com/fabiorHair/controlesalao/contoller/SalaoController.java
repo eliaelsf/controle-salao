@@ -30,6 +30,10 @@ import com.fabiorHair.controlesalao.service.ProdutoService;
 
 
 import lombok.AllArgsConstructor;
+/**
+ * @author eliael.figueiredo
+ *
+ */
 
 @AllArgsConstructor
 @CrossOrigin(origins = "*")

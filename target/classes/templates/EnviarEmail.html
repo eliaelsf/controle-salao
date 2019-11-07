@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width" />
+<title>Enviar E-mail Clientes</title>
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+	integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+	crossorigin="anonymous" />
+</head>
+<body>
+	<div class="panel panel-default" style="margin: 10px">
+		<div class="panel-heading">
+			<h1 class="panel-title">Enviar E-mail</h1>
+		</div>
+		<div class="panel-body">
+			<form class="form-inline" method="POST" th:object="${envioEmail}" th:action="@{/salaoFabio}" style="margin: 20px 0">
+				<div class="form-group">					
+					<input type="text" class="form-control" placeholder="Assunto E-mail" th:field="*{assuntoEmail}" />
+					<input type="text" class="form-control" placeholder="Remetente" th:field="*{remetenteEmail}" />
+					<input type="text" class="form-control" placeholder="Corpo E-mail" th:field="*{corpoEmail}" />
+					<form:errors	path="envioEmail.assuntoEmail" cssStyle="color:red"/>
+					<button type="submit" class="btn btn-primary">Enviar</button>
+				</div>
+			</form>	
+			<div class="panel-heading">
+			  <h1 class="panel-title">E-mail com erro</h1>
+		    </div>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>E-mail</th>
+						<th>Erro</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr th:each="emailErro : ${emailErros}">
+						<td th:text="${emailErro.email}"></td>
+						<td th:text="${emailErro.erro}"></td>
+					</tr>
+				</tbody>
+			</table>		
+		</div>
+	</div>
+</body>
+
+</html>

@@ -36,8 +36,6 @@ public class Pessoa extends Modelo {
 	private static final long serialVersionUID = 3159340602804443700L;
 
 	@Id
-	//@GeneratedValue(strategy = GenerationType.TABLE, generator = "pessoaGenerator")
-	//@TableGenerator(name = "pessoaGenerator", allocationSize = 1)
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="ID_PESSOA")
 	private Long id;

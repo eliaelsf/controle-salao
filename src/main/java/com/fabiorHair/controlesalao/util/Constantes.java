@@ -1,5 +1,9 @@
 package com.fabiorHair.controlesalao.util;
-
+/**
+ * 
+ * @author eliael.figueiredo
+ *
+ */
 public class Constantes {
 	
 	public final static String USUARIO_ATIVO = "A";		

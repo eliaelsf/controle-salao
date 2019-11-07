@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: controle-salao
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: eliael.figueiredo
+Implementation-Vendor-Id: com.fabiorHair
+Build-Jdk: 1.8.0_191
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/controle-salao
+Created-By: Maven Integration for Eclipse
+

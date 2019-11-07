@@ -21,6 +21,11 @@ import com.fabiorHair.controlesalao.util.StringUtil;
 
 import lombok.AllArgsConstructor;
 
+/**
+ * 
+ * @author eliael.figueiredo
+ *
+ */
 
 @AllArgsConstructor
 public class DisparoEmail implements Callable<List<String>> {

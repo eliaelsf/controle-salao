@@ -32,8 +32,6 @@ public class User extends Modelo {
    private static final long serialVersionUID = 1L;
 	
 	@Id
-	//@GeneratedValue(strategy = GenerationType.TABLE, generator = "userGenerator")
-	//@TableGenerator(name = "userGenerator", allocationSize = 1)
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="ID_USER")
 	private Long id;	

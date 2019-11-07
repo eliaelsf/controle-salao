@@ -31,13 +31,13 @@ import com.fabiorHair.controlesalao.util.Constantes;
 import com.fabiorHair.controlesalao.util.StringUtil;
 
 import lombok.AllArgsConstructor;
+/** 
+ * @author eliael.figueiredo 
+ */
 
 @AllArgsConstructor
 @Service
-public class EnvioEmailService {
-	/*
-	@Value("${app.mail.servidor}")
-	String servidorEmail; */	
+public class EnvioEmailService {	
 	
 	private LeitorArquivo leitorArquivo;	
 	private FileStorageProperties fileStorageProperties;

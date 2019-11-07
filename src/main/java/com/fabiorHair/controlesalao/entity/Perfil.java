@@ -31,8 +31,6 @@ public class Perfil extends Modelo {
 	private static final long serialVersionUID = 3483290608150356558L;
 
 	@Id
-	//@GeneratedValue(strategy = GenerationType.TABLE, generator = "perfilGenerator")
-	//@TableGenerator(name = "perfilGenerator", allocationSize = 1)
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="ID_PERFIL")
 	private Long id;

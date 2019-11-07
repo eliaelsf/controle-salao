@@ -1,5 +1,3 @@
-
-
 package com.fabiorHair.controlesalao.service;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -18,7 +16,9 @@ import org.springframework.web.multipart.MultipartFile;
 import com.fabioHair.controlesalao.properties.FileStorageProperties;
 import com.fabiorHair.controlesalao.exception.FileStorageException;
 import com.fabiorHair.controlesalao.model.Arquivo;
-
+/** 
+ * @author eliael.figueiredo 
+ */
 @Service
 public class FileStorageService {
 	
@@ -31,14 +31,13 @@ public class FileStorageService {
         try {
             Files.createDirectories(this.fileStorageLocation);
         } catch (Exception ex) {
-            throw new FileStorageException("Could not create the directory where the uploaded files will be stored.", ex);
+            throw new FileStorageException("Não pode criar o diretório de upload onde os arquivos serão salvos.", ex);
         }
     }
     
     public String storeFile(MultipartFile file) {        
         String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-        try {
-            // Check if the file's name contains invalid characters
+        try {           
             if (fileName.contains("..")) {
                 throw new FileStorageException("Sorry! Filename contains invalid path sequence " + fileName);
             }
@@ -47,7 +46,7 @@ public class FileStorageService {
 
             return fileName;
         } catch (IOException ex) {
-            throw new FileStorageException("Could not store file " + fileName + ". Please try again!", ex);
+            throw new FileStorageException("Não pode encontar o arquivo " + fileName + ". Por favor tente novament!", ex);
         }
     }
     
@@ -62,7 +61,7 @@ public class FileStorageService {
     	try {
     		return Files.readAllBytes(this.fileStorageLocation.resolve(fileName).normalize());
     	}catch(IOException ex) {
-    		throw new FileStorageException("NÃ£o pode encontar o arquvi " + fileName + ". Please try again!", ex);
+    		throw new FileStorageException("Não pode encontar o arquivo " + fileName + ". Por favor tente novamente!", ex);
     	}
     }
     

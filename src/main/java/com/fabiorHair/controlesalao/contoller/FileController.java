@@ -32,6 +32,11 @@ import com.fabiorHair.controlesalao.seguranca.annotation.Privado;
 import com.fabiorHair.controlesalao.service.FileStorageService;
 
 import lombok.AllArgsConstructor;
+/**
+ * 
+ * @author eliael.figueiredo
+ *
+ */
 
 @AllArgsConstructor
 @CrossOrigin(origins = "*")

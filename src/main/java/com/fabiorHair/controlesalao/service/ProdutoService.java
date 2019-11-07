@@ -13,7 +13,12 @@ import org.springframework.stereotype.Service;
 import com.fabiorHair.controlesalao.entity.Produto;
 import com.fabiorHair.controlesalao.model.ProdutoDTO;
 import com.fabiorHair.controlesalao.repository.ProdutoRepository;
-import com.fabiorHair.controlesalao.util.StringUtil;
+
+/**
+ * 
+ * @author eliael.figueiredo
+ *
+ */
 
 @Service
 public class ProdutoService {

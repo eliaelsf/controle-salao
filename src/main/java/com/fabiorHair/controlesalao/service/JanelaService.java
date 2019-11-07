@@ -17,7 +17,9 @@ import com.fabiorHair.controlesalao.repository.JanelaRepository;
 import com.fabiorHair.controlesalao.repository.PessoaRepository;
 import com.fabiorHair.controlesalao.util.Constantes;
 import com.fabiorHair.controlesalao.util.DateUtils;
-
+/** 
+ * @author eliael.figueiredo 
+ */
 @Service
 public class JanelaService {
 	

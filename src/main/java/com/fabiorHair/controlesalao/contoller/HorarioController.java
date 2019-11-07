@@ -25,7 +25,12 @@ import com.fabiorHair.controlesalao.util.DateUtils;
 import com.fabiorHair.controlesalao.util.StringUtil;
 
 import lombok.AllArgsConstructor;
-
+/**
+ * Responsável por diponibilizar os dados dos horários e janelas paara os
+ * horário e agendamentos.
+ * @author eliael.figueiredo
+ *
+ */
 @AllArgsConstructor
 @CrossOrigin(origins = "*")
 @RestController

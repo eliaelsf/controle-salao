@@ -35,6 +35,11 @@ import com.fabiorHair.controlesalao.repository.UserRepository;
 import com.fabiorHair.controlesalao.seguranca.SegurancaAPIThreadLocal;
 import com.fabiorHair.controlesalao.util.DateUtils;
 import com.fabiorHair.controlesalao.util.FormatadorUtil;
+/**
+ * 
+ * @author eliael.figueiredo
+ *
+ */
 
 @Service
 public class SegurancaServico {
