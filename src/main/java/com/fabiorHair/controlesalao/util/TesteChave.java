@@ -7,14 +7,13 @@ import java.text.SimpleDateFormat;
 public class TesteChave {
 	
 	public static void main(String[] args) {
+		
+		  String host = args[0];
+	      String user = host.substring(0, host.indexOf('@'));
+	      host = host.substring(host.indexOf('@')+1);
 
-		String dataS = "Mon Oct 07 2019 00:00:00";
-		DateFormat data = new SimpleDateFormat("EEE MMM dd yyyy HH:mm:ss");
-		try {
-			data.parse(dataS);
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
+		String empresa ="Wisconsin 1164615-wisconsin_international_assessoria".replaceAll("[\\ ].*", "");
+		System.out.println(empresa);
 		/*String texto = "teste msg sera criptografada.";
 		String chave = "eliael18";
 		String textCript = FormatadorUtil.encryptDES(texto, chave);
